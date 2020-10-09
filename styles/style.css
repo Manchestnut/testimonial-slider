@@ -7,19 +7,64 @@
 
 body {
   font-family: "Inter", sans-serif;
+  color: #202046;
 }
 
-.content {
-  width: 30%;
+.content .content-slide {
+  margin-block: 50px;
+}
+
+.content .content-slide img {
+  width: 250px;
+  display: block;
   margin: auto;
-  overflow: hidden;
 }
 
-.content-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 500px;
+.content .content-slide button {
+  position: absolute;
+  border: none;
+  background: lightgray;
+  padding: 7px;
+  top: 285px;
+  z-index: 1;
+}
+
+.content .content-slide button:hover {
+  cursor: pointer;
+}
+
+.content .content-slide #nextBtn {
+  left: 50%;
+  border-radius: 0 20px 20px 0;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+.content .content-slide #prevBtn {
+  left: 40%;
+  border-radius: 20px 0 0 20px;
+  padding-right: 25px;
+  padding-left: 10px;
+}
+
+.content #text {
+  font-weight: 300;
+  margin-inline: 30px;
+  text-align: center;
+  line-height: 23px;
+}
+
+.name-job {
+  text-align: center;
+  margin-block: 20px;
+}
+
+.name-job #name {
+  font-weight: 500;
+}
+
+.name-job #job {
+  font-weight: 300;
+  color: #babacf;
 }
 /*# sourceMappingURL=style.css.map */
