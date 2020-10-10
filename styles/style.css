@@ -10,61 +10,151 @@ body {
   color: #202046;
 }
 
-.content .content-slide {
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
   margin-block: 50px;
 }
 
-.content .content-slide img {
-  width: 250px;
+.content img {
+  min-width: 250px;
+  max-width: 350px;
+  max-height: 350px;
   display: block;
   margin: auto;
 }
 
-.content .content-slide button {
-  position: absolute;
-  border: none;
-  background: lightgray;
-  padding: 7px;
-  top: 285px;
-  z-index: 1;
+.content .btn-container {
+  width: 65px;
+  height: 30px;
+  background: white;
+  border-radius: 50px;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.content .content-slide button:hover {
+.content button {
+  border: none;
+  background: none;
+  padding: 6px;
+  margin: 0;
+  color: grey;
+}
+
+.content button:hover {
   cursor: pointer;
 }
 
-.content .content-slide #nextBtn {
-  left: 50%;
-  border-radius: 0 20px 20px 0;
-  padding-left: 25px;
-  padding-right: 10px;
+.content #nextBtn {
+  margin-right: 3px;
 }
 
-.content .content-slide #prevBtn {
-  left: 40%;
-  border-radius: 20px 0 0 20px;
-  padding-right: 25px;
-  padding-left: 10px;
+.content #prevBtn {
+  margin-left: 3px;
 }
 
-.content #text {
+#text {
   font-weight: 300;
-  margin-inline: 30px;
   text-align: center;
   line-height: 23px;
+  min-width: 230px;
+  max-width: 330px;
 }
 
 .name-job {
   text-align: center;
-  margin-block: 20px;
+  min-width: 240px;
 }
 
 .name-job #name {
   font-weight: 500;
+  margin-right: 8px;
 }
 
 .name-job #job {
   font-weight: 300;
   color: #babacf;
+}
+
+/**Media queries**/
+/**iPad**/
+/**Desktop**/
+@media (min-width: 1280px), (max-height: 720px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: hidden;
+  }
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 330px;
+  }
+  .content .info #text {
+    text-align: start;
+    margin-bottom: 30px;
+  }
+  .content .info .name-job {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .content img {
+    width: 500px;
+    height: 500px;
+  }
+  .content .btn-container {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 485px;
+    left: 20px;
+  }
+  .content .img-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 /*# sourceMappingURL=style.css.map */
